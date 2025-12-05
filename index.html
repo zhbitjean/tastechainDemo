@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Tastechain – Our Story</title>
+  <title>TasteChain – Global Restaurant AI × Supply Chain × Web3 Data Network</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Tastechain builds AI + Web3 financial infrastructure for restaurants, turning everyday meals into programmable on-chain experiences."
+    content="TasteChain is the world's first restaurant AI × supply chain × Web3 data network, powered by real restaurant data and the TASTE token."
   />
   <style>
     :root {
@@ -192,6 +192,19 @@
       color: transparent;
     }
 
+    h2 {
+      margin: 0 0 6px;
+      font-size: 1.2rem;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin: 4px 0 10px;
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
     .hero-lead {
       color: var(--text-muted);
       font-size: 0.98rem;
@@ -280,19 +293,6 @@
       margin-bottom: 30px;
     }
 
-    section h2 {
-      margin: 0 0 6px;
-      font-size: 1.2rem;
-      letter-spacing: -0.01em;
-    }
-
-    section p {
-      margin: 4px 0 10px;
-      font-size: 0.94rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-
     .section-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
@@ -312,6 +312,22 @@
       padding: 14px 16px 12px;
     }
 
+    .list {
+      margin: 4px 0 10px;
+      padding-left: 18px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .subtle-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(163, 173, 204, 0.9);
+      margin-bottom: 4px;
+    }
+
     .stack-list {
       display: flex;
       flex-wrap: wrap;
@@ -329,20 +345,22 @@
       color: var(--text-muted);
     }
 
-    .subtle-label {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: rgba(163, 173, 204, 0.9);
-      margin-bottom: 4px;
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
     }
 
-    .list {
-      margin: 4px 0 10px;
-      padding-left: 18px;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.6;
+    @media (max-width: 720px) {
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .token-number {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #ffe4b2;
     }
 
     .team-card {
@@ -395,228 +413,393 @@
     <nav class="nav">
       <div class="nav-brand">
         <div class="logo-dot"></div>
-        <span>Tastechain</span>
+        <span>TasteChain</span>
       </div>
       <div class="nav-links">
         <a href="/restaurants" class="pill-link">For Restaurants</a>
-        <a href="/diners" class="pill-link">For Diners</a>
-        <a href="/about" class="pill-link">Our Story</a>
+        <a href="/developers" class="pill-link">For Developers</a>
+        <a href="/about" class="pill-link">White Paper</a>
         <a href="/app" class="pill-link pill-primary">Open App</a>
       </div>
     </nav>
   </header>
 
-    <!-- HERO / OVERVIEW -->
   <main>
+    <!-- HERO / ABSTRACT -->
     <section class="hero">
       <div>
         <div class="eyebrow">
           <span class="eyebrow-dot"></span>
-          <span>Our Story</span>
+          <span>TasteChain White Paper v1.0 – 2025</span>
         </div>
         <h1>
-          Building the <span class="highlight">on-chain rails</span> for everyday dining
+          The first <span class="highlight">restaurant AI × supply chain × Web3</span> data network
         </h1>
         <p class="hero-lead">
-          Tastechain is an AI + Web3 financial layer for restaurants and diners.
-          We turn real-world orders into transparent, programmable on-chain
-          payments—so local kitchens can enjoy lower fees, richer data, and
-          new earning models without needing a crypto background.
+          TasteChain is a new kind of infrastructure: it connects real restaurant
+          supply-chain data, industry-grade AI models, and on-chain incentive
+          mechanisms. With cooperating restaurants feeding live data into the
+          network, TasteChain turns everyday operations into a shared AI + Web3
+          data asset, powered by the native token <strong>TASTE</strong>.
         </p>
         <div class="hero-tags">
-          <span class="tag">AI-powered restaurant finance</span>
-          <span class="tag">Programmable on-chain payments</span>
-          <span class="tag">Designed for small businesses</span>
+          <span class="tag">Restaurant data network</span>
+          <span class="tag">AI forecasting & optimization</span>
+          <span class="tag">Web3 incentive & tokenomics</span>
+          <span class="tag">Open developer platform</span>
         </div>
         <div class="hero-meta">
-          <span>Headquartered in: <strong>New York Metro Area</strong> (example)</span>
-          <span>Focus: <strong>Immigrant & family-run restaurants</strong></span>
+          <span>Token: <strong>TASTE (fixed 1,000,000,000)</strong></span>
+          <span>Focus: <strong>餐饮 AI × 供应链 × Web3</strong></span>
         </div>
       </div>
 
       <aside class="hero-card">
         <div class="hero-card-inner">
-          <div class="hero-card-title">What Tastechain is building</div>
+          <div class="hero-card-title">Abstract</div>
           <div class="hero-card-main">
-            A restaurant-native <strong>AI + DeFi settlement network</strong> that
-            feels like a normal checkout experience—but settles on-chain in the
-            background.
+            TasteChain links <strong>AI</strong>, <strong>restaurant supply-chain data</strong>,
+            and <strong>Web3 incentives</strong> into one open network. TASTE tokens
+            reward data contributors, fund a developer ecosystem, and support
+            supply-chain settlement and in-app economies.
           </div>
           <ul class="hero-card-list">
-            <li>AI insight engine for menu, cost & margin analytics</li>
-            <li>Web2-simple, Web3-native payments for diners</li>
-            <li>Transparent revenue share and loyalty logic on-chain</li>
+            <li>Real-time data from cooperating restaurants</li>
+            <li>AI models for inventory, pricing, staffing & profit</li>
+            <li>Open APIs & SDKs for third-party apps</li>
           </ul>
         </div>
       </aside>
     </section>
 
-    <!-- JOURNEY / SPARK -->
-    <section>
-      <h2>From neighborhood kitchens to programmable finance</h2>
-      <p>
-        Tastechain started with a simple, familiar scene: a busy dinner rush at a
-        small family restaurant, where every extra fee or broken machine directly
-        cuts into the owner’s rent and payroll. The desire to accept modern
-        payment methods—including digital assets—was there. The problem was
-        everything around it: compliance, onboarding, accounting, and technical
-        complexity.
-      </p>
-      <p>
-        We asked ourselves a straightforward question: what if restaurants could
-        keep using the tools they already know, while an invisible on-chain engine
-        handled settlement, routing, fees, and analytics in the background?
-      </p>
-      <p>
-        Tastechain is our answer: a programmable layer that respects real-world
-        workflows first, and only then speaks to blockchains, smart contracts,
-        and AI models.
-      </p>
-    </section>
-
-    <!-- PROBLEM & EXECUTION -->
-    <section>
-      <h2>The gap we saw in restaurant payments</h2>
-      <p>
-        Traditional acquirers and wallet apps weren’t built with small restaurant
-        operators in mind, especially those juggling language barriers, tight cash
-        flow, and complex supply chains. We repeatedly saw the same pain points:
-      </p>
-      <ul class="list">
-        <li>High and opaque payment processing fees</li>
-        <li>No easy bridge between fiat ledgers and on-chain records</li>
-        <li>Fragmented data across POS, delivery apps, and bank statements</li>
-        <li>No standard for AI agents to act on verifiable, on-chain transactions</li>
-      </ul>
-      <p>
-        Tastechain is designed as a full stack response: compliant on- and off-ramp
-        integrations, a DeFi-native settlement layer, and AI agents that can read
-        and explain the numbers in plain language.
-      </p>
-    </section>
-
-    <!-- GOOGLE CLOUD / TECH ARCHITECTURE -->
+    <!-- PROBLEM STATEMENT -->
     <section class="section-grid">
       <div>
-        <h2>AI + Cloud architecture</h2>
+        <h2>1. Problem statement – why TasteChain exists</h2>
         <p>
-          Tastechain is built on a modern Google Cloud–based data and AI stack,
-          enabling us to process restaurant transactions, crypto settlements, and
-          operational metrics in real time—and then surface them through natural
-          language queries for owners and managers. :contentReference[oaicite:1]{index=1}
+          The global restaurant industry runs on thin margins (5%–10%) and
+          fragile supply chains. Most operators don’t have standardized data,
+          centralized systems, or access to AI inventory and purchasing tools.
+          Developers, meanwhile, lack a live, permissioned restaurant data
+          network to build serious AI products on.
         </p>
+        <p>
+          TasteChain is created to solve four core pain points:
+        </p>
+        <ul class="list">
+          <li><strong>Opaque & unstable supply chains</strong> – volatile prices, high waste, inconsistent suppliers.</li>
+          <li><strong>No usable data for AI</strong> – scattered POS logs, manual spreadsheets, or no data at all.</li>
+          <li><strong>Developers can’t access real industry data</strong> – no shared dataset, no standard API, no licensing channel.</li>
+          <li><strong>Ultra-thin restaurant margins</strong> – any improvement in procurement, inventory, or cost control is valuable.</li>
+        </ul>
+      </div>
+      <div>
         <div class="card">
-          <div class="subtle-label">Core stack (example)</div>
-          <div class="stack-list">
-            <span class="stack-pill">Vertex AI</span>
-            <span class="stack-pill">Gemini APIs</span>
-            <span class="stack-pill">BigQuery</span>
-            <span class="stack-pill">Cloud Run</span>
-            <span class="stack-pill">Firestore</span>
-            <span class="stack-pill">Cloud Storage</span>
+          <div class="subtle-label">What restaurants need</div>
+          <ul class="list">
+            <li>Better purchasing and inventory turnover</li>
+            <li>Transparent supplier and price comparisons</li>
+            <li>AI “co-pilot” for daily operations, not just reports</li>
+            <li>A low-friction way to share and monetize data</li>
+          </ul>
+          <p>
+            TasteChain positions real restaurant data as an asset class,
+            wrapped in AI and Web3 rails.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION: THREE LAYERS -->
+    <section>
+      <h2>2. TasteChain solution – three layers</h2>
+      <p>
+        TasteChain is a decentralized restaurant industry data & AI platform,
+        built from three tightly connected layers.
+      </p>
+
+      <div class="section-grid">
+        <div class="card">
+          <div class="subtle-label">2.1 Data Network Layer</div>
+          <p>
+            Live data streams from cooperating restaurants:
+          </p>
+          <ul class="list">
+            <li>Purchasing data (daily/weekly inbound goods)</li>
+            <li>Inventory (ingredients, consumables, packaging)</li>
+            <li>Dish sales and demand trends</li>
+            <li>Raw material cost & price volatility</li>
+            <li>Staff scheduling & labor patterns</li>
+            <li>Logistics and delivery performance</li>
+            <li>Supplier quotes and contracts</li>
+            <li>Energy & equipment usage (optional sensors)</li>
+          </ul>
+          <p>
+            Data is cleaned via the TasteChain SDK, stored in an off-chain
+            secure data lake, and hashed on-chain to guarantee integrity and
+            provenance.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="subtle-label">2.2 AI Intelligence Layer</div>
+          <p>
+            Industry-grade AI models provide predictions and optimization:
+          </p>
+          <ul class="list">
+            <li>Inventory forecasting (Stock Predictor)</li>
+            <li>Ingredient waste & spoilage prediction</li>
+            <li>Hot dish trends & demand analysis</li>
+            <li>Purchasing strategy optimization</li>
+            <li>Multi-supplier price comparison (Market Matcher)</li>
+            <li>Staff scheduling optimization</li>
+            <li>Back-of-house consumable anomaly alerts</li>
+            <li>Store profit and loss analytics</li>
+          </ul>
+          <p>
+            All models are exposed via APIs for restaurant dashboards and
+            third-party apps.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 16px;">
+        <div class="subtle-label">2.3 Developer Platform Layer</div>
+        <p>
+          TasteChain provides an open platform for developers to build
+          restaurant applications on top of standardized data and AI:
+        </p>
+        <ul class="list">
+          <li>Standard APIs (inventory, sales, supply-chain, AI forecasts)</li>
+          <li>Sandbox data + developer SDKs</li>
+          <li>Smart contract templates</li>
+          <li>Plugin / App marketplace</li>
+          <li>Restaurant-side control panel & data permission system</li>
+        </ul>
+        <p>
+          Developers can build ordering systems, CRM & loyalty, delivery tools,
+          kitchen management, supply-chain auction markets, staffing tools,
+          and AI recommendation engines. The platform charges 5%–10% fees;
+          the rest flows to developers.
+        </p>
+      </div>
+    </section>
+
+    <!-- TECH ARCHITECTURE -->
+    <section>
+      <h2>3. Technical architecture</h2>
+      <p>
+        TasteChain is organized into five technical layers, from data ingestion
+        to applications:
+      </p>
+      <div class="two-col">
+        <div class="card">
+          <div class="subtle-label">3.1 Data Ingestion Layer</div>
+          <ul class="list">
+            <li>POS system integrations</li>
+            <li>Handheld scanners & mobile apps</li>
+            <li>Inventory sensors (optional)</li>
+            <li>Supplier APIs</li>
+            <li>Manual input modules for small operators</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="subtle-label">3.2 Secure Data Lake</div>
+          <ul class="list">
+            <li>Data cleaning & normalization</li>
+            <li>De-identification & masking</li>
+            <li>Encrypted storage</li>
+            <li>Multi-level access permissions</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="subtle-label">3.3 Blockchain Layer</div>
+          <ul class="list">
+            <li>On-chain hashes of data batches</li>
+            <li>Audit trails for data usage</li>
+            <li>Smart contracts for apps, settlement & tokens</li>
+            <li>TASTE token economy logic</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="subtle-label">3.4 AI Compute Layer</div>
+          <ul class="list">
+            <li>Model training & fine-tuning</li>
+            <li>Model deployment & scaling</li>
+            <li>API-based inference serving</li>
+            <li>Real-time or scheduled predictions</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="subtle-label">3.5 Application Layer</div>
+          <ul class="list">
+            <li>Restaurant dashboards</li>
+            <li>Developer dashboards</li>
+            <li>API explorer & documentation</li>
+            <li>Plugin / App marketplace</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOKENOMICS -->
+    <section>
+      <h2>4. Tokenomics – TASTE token</h2>
+      <div class="section-grid">
+        <div>
+          <p><strong>4.1 Name</strong><br />TASTE Token</p>
+          <p class="token-number"><strong>4.2 Fixed supply: 1,000,000,000 TASTE</strong></p>
+          <div class="card">
+            <div class="subtle-label">4.3 Allocation</div>
+            <ul class="list">
+              <li>30% – Data contribution rewards</li>
+              <li>25% – Developer ecosystem incentives</li>
+              <li>20% – Operations fund</li>
+              <li>10% – Team</li>
+              <li>10% – Marketing & growth</li>
+              <li>5% – Liquidity pool</li>
+            </ul>
           </div>
-          <p>
-            This stack powers our AI agents, data warehouse, and stateless
-            microservices—so we can keep the system observable, scalable, and easy
-            to audit.
-          </p>
         </div>
-      </div>
-
-      <div>
-        <h2>On-chain settlement & liquidity</h2>
-        <p>
-          Under the hood, Tastechain connects to leading DeFi protocols and
-          on-/off-ramp providers (for example, Uniswap-style liquidity and
-          regulated fiat ⇄ crypto ramps) to enable programmable fee routing and
-          pooled rewards for the ecosystem. :contentReference[oaicite:2]{index=2}
-        </p>
-        <div class="card">
-          <div class="subtle-label">What the on-chain layer handles</div>
-          <ul class="list">
-            <li>Splits payments between restaurant, taxes, rewards & protocol fees</li>
-            <li>
-              Records each transaction as a verifiable, on-chain economic action
-            </li>
-            <li>Supports loyalty points and “mining by eating” style incentives</li>
-          </ul>
-          <p>
-            For diners and staff, it feels like a normal payment experience. For
-            the chain, everything settles in a single programmable transaction.
-          </p>
+        <div>
+          <div class="card">
+            <div class="subtle-label">4.4 Utility</div>
+            <ul class="list">
+              <li>Pay for API calls and AI services</li>
+              <li>Reward restaurants for uploading verified data</li>
+              <li>Incentivize developers to build applications</li>
+              <li>Participate in supply-chain bidding markets</li>
+              <li>Purchase plugins and apps in the marketplace</li>
+              <li>Platform governance & parameter voting</li>
+              <li>User rewards and loyalty (customer points)</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SOCIAL IMPACT -->
-    <section class="section-grid">
-      <div>
-        <h2>Built for immigrant & family-run restaurants</h2>
-        <p>
-          Tastechain focuses on the restaurants that are usually last to benefit
-          from new financial infrastructure: small, independent, often
-          immigrant-owned shops that are busy surviving, not reading whitepapers.
-        </p>
-        <p>
-          Our goal is to reduce payment friction by double-digit percentages, give
-          owners simpler visibility into cash flow, and allow staff to share in
-          upside through on-chain rewards—without any of them needing to manage
-          private keys or DeFi dashboards.
-        </p>
-      </div>
-      <div>
-        <div class="card">
-          <div class="subtle-label">Impact goals</div>
-          <ul class="list">
-            <li>Lower effective payment fees for local restaurants</li>
-            <li>Help owners understand finances via AI chat, not spreadsheets</li>
-            <li>
-              Create new earning and loyalty models for workers & regular customers
-            </li>
-            <li>
-              Align with responsible AI & privacy-first design, so data stays
-              protected
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- FUTURE VISION -->
+    <!-- BUSINESS MODEL -->
     <section>
-      <h2>The future of Tastechain</h2>
+      <h2>5. Business model</h2>
       <p>
-        We believe the next generation of restaurant finance will be:
+        TasteChain’s revenue stack is designed to be aligned with data quality,
+        AI usage, and ecosystem growth:
       </p>
       <ul class="list">
-        <li><strong>Programmatic:</strong> every charge, fee, and reward is codified.</li>
-        <li><strong>Data-rich:</strong> menus, orders, and loyalty live as structured data.</li>
-        <li><strong>Transparent:</strong> stakeholders can verify how value flows.</li>
-        <li><strong>Accessible:</strong> small shops can use it with zero crypto jargon.</li>
+        <li>AI forecasting and optimization fees</li>
+        <li>Revenue share from the developer marketplace</li>
+        <li>SaaS subscriptions from restaurants</li>
+        <li>Licensed access to aggregated, permissioned data</li>
+        <li>Commission from supply-chain recommendations & purchases</li>
+        <li>Long-term value of the TASTE token ecosystem</li>
       </ul>
+    </section>
+
+    <!-- ROADMAP -->
+    <section>
+      <h2>6. Roadmap</h2>
+      <div class="two-col">
+        <div class="card">
+          <div class="subtle-label">Phase 1 – 2025 Q4</div>
+          <ul class="list">
+            <li>Finalize white paper v1.0</li>
+            <li>Establish data bridges with initial partner restaurants</li>
+            <li>Build basic data ingestion system</li>
+            <li>Deploy ERC-20 version of TASTE</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="subtle-label">Phase 2 – 2026 Q1</div>
+          <ul class="list">
+            <li>Release developer APIs</li>
+            <li>Launch initial AI models</li>
+            <li>Run closed beta with selected developers</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="subtle-label">Phase 3 – 2026 Q2–Q4</div>
+          <ul class="list">
+            <li>Launch App / Plugin marketplace</li>
+            <li>Roll out supply-chain price comparison system</li>
+            <li>Onboard 50+ partner restaurants</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="subtle-label">Phase 4 – 2027+</div>
+          <ul class="list">
+            <li>Expand into a U.S.-wide restaurant data network</li>
+            <li>Grow into a global restaurant AI + Web3 open platform</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RISK & COMPLIANCE -->
+    <section>
+      <h2>7. Risk & compliance</h2>
       <p>
-        Tastechain’s roadmap continues to evolve with our partner restaurants,
-        delivery networks, and local communities. We’re here to build, listen, and
-        iterate—one neighborhood at a time.
+        TasteChain is built with regulatory and ethical constraints in mind:
+      </p>
+      <ul class="list">
+        <li>Data privacy & protection (e.g., GDPR / CCPA alignment)</li>
+        <li>Blockchain and digital asset regulatory requirements</li>
+        <li>Tax and accounting standards for on-chain and off-chain flows</li>
+        <li>Restaurant industry health & safety regulations</li>
+        <li>Regulatory frameworks for crypto tokens, especially in the U.S.</li>
+      </ul>
+    </section>
+
+    <!-- CONCLUSION + CHINESE SUMMARY -->
+    <section>
+      <h2>8. Conclusion</h2>
+      <p>
+        By combining <strong>real restaurant data</strong>, <strong>AI models</strong>, and
+        <strong>Web3 incentive mechanisms</strong>, TasteChain aims to build a new
+        transparent, efficient, and intelligent infrastructure layer for the
+        global restaurant industry.
+      </p>
+      <p>
+        Your existing partner restaurants are the key opening advantage: as more
+        data flows into the network, the value of developer ecosystems,
+        supply-chain systems, AI assistants, and TASTE token economics all grow
+        around this core data asset.
+      </p>
+    </section>
+
+    <section>
+      <h2>简要中文版概述</h2>
+      <p>
+        TasteChain 是全球首个专注餐饮的 AI × 供应链 × Web3 数据网络。
+        通过与真实餐馆建立数据连接，我们实时采集进货、库存、销量、供应链、
+        人力排班等核心数据，存入安全数据湖并在链上做哈希存证。
+      </p>
+      <p>
+        在此基础上，TasteChain 提供库存预测、损耗率预测、菜品趋势、
+        采购优化、供应商比价、人力排班优化、利润分析等行业级 AI 模型，
+        并通过标准化 API 对开发者开放，形成开放开发平台与插件市场。
+      </p>
+      <p>
+        原生代币 TASTE 总量固定 10 亿，用于激励餐馆上传真实数据、
+        奖励开发者、支付 AI / API 调用、参与供应链竞价、购买插件以及平台治理。
+        随着更多餐馆与开发者加入，整个网络的数据和应用将形成正向飞轮。
       </p>
     </section>
 
     <!-- TEAM -->
     <section>
-      <h2>Meet the builder(s)</h2>
+      <h2>Core team</h2>
       <div class="card team-card">
         <div class="avatar">
-          <!-- Replace initials below with your own -->
+          <!-- Replace initials with your own -->
           <span>TC</span>
         </div>
         <div>
           <div class="subtle-label">Founder / Core Team</div>
-          <!-- TODO: Replace this with your actual name and story -->
           <p>
-            This is a placeholder for your founder story. Here you can describe your
-            background (for example: engineering, restaurant operations, finance, or
-            community work) and why you decided to build Tastechain for real-world
-            restaurants instead of purely digital use cases.
+            Replace this paragraph with your real founder story: restaurant
+            background, AI / cloud experience, supply-chain expertise, or
+            community roots in local food ecosystems. Explain why you are
+            building TasteChain with real餐馆数据作为网络的核心资产。
           </p>
           <p>
             <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
@@ -626,31 +809,16 @@
         </div>
       </div>
     </section>
-
-    <!-- OPTIONAL: Chinese section (you can delete if not needed) -->
-    <section>
-      <h2>简要中文介绍（可选）</h2>
-      <p>
-        Tastechain 是一个为餐饮行业打造的 AI + 区块链结算网络，目标是帮助中小餐馆
-        降低支付成本、打通法币与链上世界，并通过智能合约和数据分析，让每一笔餐饮
-        消费都更透明、更可编排。
-      </p>
-      <p>
-        我们希望让餐馆老板可以用自然语言和 AI 对话，而不是埋头在 Excel 里；让一线员
-        工和老顾客通过链上奖励真正分享店铺的成长，而不是被复杂的手续费结构所吞噬。
-      </p>
-    </section>
   </main>
 
   <footer>
     <div class="footer-inner">
-      <div>© <span id="year"></span> Tastechain Inc. All rights reserved.</div>
+      <div>© <span id="year"></span> TasteChain. All rights reserved.</div>
       <div class="footer-links">
         <a href="/technology">Technology</a>
         <a href="/terms">Terms</a>
         <a href="/privacy">Privacy</a>
         <a href="/contact">Contact</a>
-        <a href="https://x.com" target="_blank" rel="noreferrer">X</a>
       </div>
     </div>
   </footer>
