@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tastechain – Our Story</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Tastechain builds AI + Web3 financial infrastructure for restaurants, turning everyday meals into programmable on-chain experiences."
+  />
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0b1020;
+      --accent: #ffb347;
+      --accent-soft: rgba(255, 179, 71, 0.18);
+      --text: #f7f7ff;
+      --text-muted: #a3adcc;
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --card-bg: rgba(11, 16, 32, 0.9);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 22px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1b1f3b 0, #050816 45%, #02030a 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 8, 22, 0.95),
+        rgba(5, 8, 22, 0.85),
+        transparent
+      );
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 650;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.88rem;
+    }
+
+    .logo-dot {
+      width: 26px;
+      height: 26px;
+      border-radius: 11px;
+      background: radial-gradient(circle at 30% 20%, #fff7e6, #ffb347 40%, #ff6b3d 100%);
+      box-shadow: 0 0 18px rgba(255, 179, 71, 0.9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-dot::after {
+      content: "";
+      position: absolute;
+      inset: 30% 28%;
+      border-radius: 999px;
+      border: 2px solid rgba(0, 0, 0, 0.4);
+      border-top-color: transparent;
+      border-right-color: transparent;
+      transform: rotate(18deg);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .pill-link {
+      padding: 7px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      transition: 0.16s ease-out;
+    }
+
+    .pill-link:hover {
+      border-color: var(--accent-soft);
+      background: rgba(255, 255, 255, 0.02);
+      color: #ffffff;
+    }
+
+    .pill-primary {
+      border-color: rgba(255, 179, 71, 0.4);
+      background: radial-gradient(circle at 0 0, #ffecd2, #ffb347);
+      color: #1f1304;
+      font-weight: 600;
+      box-shadow: 0 8px 22px rgba(255, 179, 71, 0.45);
+    }
+
+    .pill-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(255, 179, 71, 0.55);
+    }
+
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+      gap: 26px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 840px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .nav {
+        flex-wrap: wrap;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(13, 19, 50, 0.9);
+      border: 1px solid rgba(123, 135, 186, 0.6);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #37ffb0;
+      box-shadow: 0 0 10px rgba(55, 255, 176, 0.9);
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 3vw, 2.6rem);
+      margin: 4px 0 10px;
+      letter-spacing: -0.03em;
+    }
+
+    h1 span.highlight {
+      background-image: linear-gradient(120deg, #ffb347, #ffe77a);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-lead {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      font-size: 0.76rem;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(9, 12, 31, 0.8);
+      color: var(--text-muted);
+    }
+
+    .hero-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top, rgba(255, 179, 71, 0.12), transparent 55%),
+        var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0 100%, rgba(255, 110, 80, 0.15), transparent 55%),
+        radial-gradient(circle at 100% 0, rgba(112, 222, 255, 0.08), transparent 55%);
+      opacity: 0.9;
+      mix-blend-mode: screen;
+    }
+
+    .hero-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 6px;
+    }
+
+    .hero-card-main {
+      font-size: 1.02rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-card-main strong {
+      color: #ffe4b2;
+    }
+
+    .hero-card-list {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    section h2 {
+      margin: 0 0 6px;
+      font-size: 1.2rem;
+      letter-spacing: -0.01em;
+    }
+
+    section p {
+      margin: 4px 0 10px;
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 840px) {
+      .section-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      background: rgba(5, 8, 22, 0.92);
+      padding: 14px 16px 12px;
+    }
+
+    .stack-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+      margin-bottom: 6px;
+    }
+
+    .stack-pill {
+      font-size: 0.78rem;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+    }
+
+    .subtle-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(163, 173, 204, 0.9);
+      margin-bottom: 4px;
+    }
+
+    .list {
+      margin: 4px 0 10px;
+      padding-left: 18px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .team-card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 10%, #fff7e6, #ffb347 35%, #ff6b3d 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #281101;
+      font-size: 1.3rem;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+    }
+
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 20px;
+    }
+
+    .footer-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 16px 20px 30px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      justify-content: space-between;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="nav-brand">
+        <div class="logo-dot"></div>
+        <span>Tastechain</span>
+      </div>
+      <div class="nav-links">
+        <a href="/restaurants" class="pill-link">For Restaurants</a>
+        <a href="/diners" class="pill-link">For Diners</a>
+        <a href="/about" class="pill-link">Our Story</a>
+        <a href="/app" class="pill-link pill-primary">Open App</a>
+      </div>
+    </nav>
+  </header>
+
+    <!-- HERO / OVERVIEW -->
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>Our Story</span>
+        </div>
+        <h1>
+          Building the <span class="highlight">on-chain rails</span> for everyday dining
+        </h1>
+        <p class="hero-lead">
+          Tastechain is an AI + Web3 financial layer for restaurants and diners.
+          We turn real-world orders into transparent, programmable on-chain
+          payments—so local kitchens can enjoy lower fees, richer data, and
+          new earning models without needing a crypto background.
+        </p>
+        <div class="hero-tags">
+          <span class="tag">AI-powered restaurant finance</span>
+          <span class="tag">Programmable on-chain payments</span>
+          <span class="tag">Designed for small businesses</span>
+        </div>
+        <div class="hero-meta">
+          <span>Headquartered in: <strong>New York Metro Area</strong> (example)</span>
+          <span>Focus: <strong>Immigrant & family-run restaurants</strong></span>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-inner">
+          <div class="hero-card-title">What Tastechain is building</div>
+          <div class="hero-card-main">
+            A restaurant-native <strong>AI + DeFi settlement network</strong> that
+            feels like a normal checkout experience—but settles on-chain in the
+            background.
+          </div>
+          <ul class="hero-card-list">
+            <li>AI insight engine for menu, cost & margin analytics</li>
+            <li>Web2-simple, Web3-native payments for diners</li>
+            <li>Transparent revenue share and loyalty logic on-chain</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <!-- JOURNEY / SPARK -->
+    <section>
+      <h2>From neighborhood kitchens to programmable finance</h2>
+      <p>
+        Tastechain started with a simple, familiar scene: a busy dinner rush at a
+        small family restaurant, where every extra fee or broken machine directly
+        cuts into the owner’s rent and payroll. The desire to accept modern
+        payment methods—including digital assets—was there. The problem was
+        everything around it: compliance, onboarding, accounting, and technical
+        complexity.
+      </p>
+      <p>
+        We asked ourselves a straightforward question: what if restaurants could
+        keep using the tools they already know, while an invisible on-chain engine
+        handled settlement, routing, fees, and analytics in the background?
+      </p>
+      <p>
+        Tastechain is our answer: a programmable layer that respects real-world
+        workflows first, and only then speaks to blockchains, smart contracts,
+        and AI models.
+      </p>
+    </section>
+
+    <!-- PROBLEM & EXECUTION -->
+    <section>
+      <h2>The gap we saw in restaurant payments</h2>
+      <p>
+        Traditional acquirers and wallet apps weren’t built with small restaurant
+        operators in mind, especially those juggling language barriers, tight cash
+        flow, and complex supply chains. We repeatedly saw the same pain points:
+      </p>
+      <ul class="list">
+        <li>High and opaque payment processing fees</li>
+        <li>No easy bridge between fiat ledgers and on-chain records</li>
+        <li>Fragmented data across POS, delivery apps, and bank statements</li>
+        <li>No standard for AI agents to act on verifiable, on-chain transactions</li>
+      </ul>
+      <p>
+        Tastechain is designed as a full stack response: compliant on- and off-ramp
+        integrations, a DeFi-native settlement layer, and AI agents that can read
+        and explain the numbers in plain language.
+      </p>
+    </section>
+
+    <!-- GOOGLE CLOUD / TECH ARCHITECTURE -->
+    <section class="section-grid">
+      <div>
+        <h2>AI + Cloud architecture</h2>
+        <p>
+          Tastechain is built on a modern Google Cloud–based data and AI stack,
+          enabling us to process restaurant transactions, crypto settlements, and
+          operational metrics in real time—and then surface them through natural
+          language queries for owners and managers. :contentReference[oaicite:1]{index=1}
+        </p>
+        <div class="card">
+          <div class="subtle-label">Core stack (example)</div>
+          <div class="stack-list">
+            <span class="stack-pill">Vertex AI</span>
+            <span class="stack-pill">Gemini APIs</span>
+            <span class="stack-pill">BigQuery</span>
+            <span class="stack-pill">Cloud Run</span>
+            <span class="stack-pill">Firestore</span>
+            <span class="stack-pill">Cloud Storage</span>
+          </div>
+          <p>
+            This stack powers our AI agents, data warehouse, and stateless
+            microservices—so we can keep the system observable, scalable, and easy
+            to audit.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h2>On-chain settlement & liquidity</h2>
+        <p>
+          Under the hood, Tastechain connects to leading DeFi protocols and
+          on-/off-ramp providers (for example, Uniswap-style liquidity and
+          regulated fiat ⇄ crypto ramps) to enable programmable fee routing and
+          pooled rewards for the ecosystem. :contentReference[oaicite:2]{index=2}
+        </p>
+        <div class="card">
+          <div class="subtle-label">What the on-chain layer handles</div>
+          <ul class="list">
+            <li>Splits payments between restaurant, taxes, rewards & protocol fees</li>
+            <li>
+              Records each transaction as a verifiable, on-chain economic action
+            </li>
+            <li>Supports loyalty points and “mining by eating” style incentives</li>
+          </ul>
+          <p>
+            For diners and staff, it feels like a normal payment experience. For
+            the chain, everything settles in a single programmable transaction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL IMPACT -->
+    <section class="section-grid">
+      <div>
+        <h2>Built for immigrant & family-run restaurants</h2>
+        <p>
+          Tastechain focuses on the restaurants that are usually last to benefit
+          from new financial infrastructure: small, independent, often
+          immigrant-owned shops that are busy surviving, not reading whitepapers.
+        </p>
+        <p>
+          Our goal is to reduce payment friction by double-digit percentages, give
+          owners simpler visibility into cash flow, and allow staff to share in
+          upside through on-chain rewards—without any of them needing to manage
+          private keys or DeFi dashboards.
+        </p>
+      </div>
+      <div>
+        <div class="card">
+          <div class="subtle-label">Impact goals</div>
+          <ul class="list">
+            <li>Lower effective payment fees for local restaurants</li>
+            <li>Help owners understand finances via AI chat, not spreadsheets</li>
+            <li>
+              Create new earning and loyalty models for workers & regular customers
+            </li>
+            <li>
+              Align with responsible AI & privacy-first design, so data stays
+              protected
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUTURE VISION -->
+    <section>
+      <h2>The future of Tastechain</h2>
+      <p>
+        We believe the next generation of restaurant finance will be:
+      </p>
+      <ul class="list">
+        <li><strong>Programmatic:</strong> every charge, fee, and reward is codified.</li>
+        <li><strong>Data-rich:</strong> menus, orders, and loyalty live as structured data.</li>
+        <li><strong>Transparent:</strong> stakeholders can verify how value flows.</li>
+        <li><strong>Accessible:</strong> small shops can use it with zero crypto jargon.</li>
+      </ul>
+      <p>
+        Tastechain’s roadmap continues to evolve with our partner restaurants,
+        delivery networks, and local communities. We’re here to build, listen, and
+        iterate—one neighborhood at a time.
+      </p>
+    </section>
+
+    <!-- TEAM -->
+    <section>
+      <h2>Meet the builder(s)</h2>
+      <div class="card team-card">
+        <div class="avatar">
+          <!-- Replace initials below with your own -->
+          <span>TC</span>
+        </div>
+        <div>
+          <div class="subtle-label">Founder / Core Team</div>
+          <!-- TODO: Replace this with your actual name and story -->
+          <p>
+            This is a placeholder for your founder story. Here you can describe your
+            background (for example: engineering, restaurant operations, finance, or
+            community work) and why you decided to build Tastechain for real-world
+            restaurants instead of purely digital use cases.
+          </p>
+          <p>
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+              LinkedIn (update this link)
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPTIONAL: Chinese section (you can delete if not needed) -->
+    <section>
+      <h2>简要中文介绍（可选）</h2>
+      <p>
+        Tastechain 是一个为餐饮行业打造的 AI + 区块链结算网络，目标是帮助中小餐馆
+        降低支付成本、打通法币与链上世界，并通过智能合约和数据分析，让每一笔餐饮
+        消费都更透明、更可编排。
+      </p>
+      <p>
+        我们希望让餐馆老板可以用自然语言和 AI 对话，而不是埋头在 Excel 里；让一线员
+        工和老顾客通过链上奖励真正分享店铺的成长，而不是被复杂的手续费结构所吞噬。
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Tastechain Inc. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="/technology">Technology</a>
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/contact">Contact</a>
+        <a href="https://x.com" target="_blank" rel="noreferrer">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
